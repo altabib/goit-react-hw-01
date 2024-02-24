@@ -12,7 +12,7 @@ const FriendListItem = ({ avatar, name, isOnline = false }) => {
       
       <p className={`${css.FriendListItemStatus} ${isOnline ? css.cardStatusOnline : css.FriendListItemStatus}`}>
         
-        {isOnline ? "isOnline" : "Offline"}</p>
+        {isOnline ? "Online" : "Offline"}</p>
       
 </div>)
 }
