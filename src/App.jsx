@@ -1,65 +1,63 @@
 import './App.css';
-import Profile from './components/Profile';
 
+import Profile from './components/Profile/Profile'
+import userData from "./userData.json"
 
-const profileData = [
-  {
-        id: "profileData_1",
-        img: "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
-        alt: "User avatar",
-        userName: "Petra Marica",
-        mail: "@pmarica",
-        adress: "Salvador, Brasil",
-        followers: 1000,
-        views: 2000,
-        likes: 3000
-  },
+import FriendList from "./components/FriendList/FriendList"
+import friends from "./friends.json"
 
-  {
-        id: "profileData_2",
-        img: "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
-        alt: "User avatar",
-        userName: "Jimi Hendrix",
-        mail: "@hendrix",
-        adress: " Seattle, USA",
-        followers: 25000000,
-        views: 3000,
-        likes: 5000000
-  },
-
-  {
-        id: "profileData_3",
-        img: "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
-        alt: "User avatar",
-        userName: "Kurt Cobain",
-        mail: "@Cobain",
-        adress: "Aberdeen, USA",
-        followers: 1000000,
-        views: 5000,
-        likes: 1400000
-  },
-];
-
+import transactions from "./transactions.json"
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory"
 
 
 function App() {
+
   return (
+
     <div>
-      {profileData.map((item) => {
-        return (
-          <Profile
-            key={item.id}
-            img={item.img}
-            alt = {item.alt}
-            userName={item.userName}
-            mail={item.mail}
-            adress={item.adress}
-            followers={item.followers}
-            views={item.views}
-            likes={item.likes}
-          />)})
-      }
+      
+      <Profile
+        
+        key={userData.id}
+
+        name={userData.username}
+
+        tag={userData.tag}
+
+        location={userData.location}
+
+        image={userData.avatar}
+
+        stats={userData.stats}
+
+      />
+        
+      <FriendList friends={friends} />
+
+      <TransactionHistory transactions={transactions} />
+      
     </div>
-  );
+  
+)
+   
 }
+
 export default App
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

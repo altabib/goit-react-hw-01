@@ -1,0 +1,13 @@
+.FriendListItemCard{
+
+}
+
+.FriendListItemStatus{
+font-size: 23px;
+  color: red;
+}
+
+
+.cardStatusOnline {
+  color: green;
+}
